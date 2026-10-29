@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Notes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <a class="logo" href="#">weather notes<span>.</span></a>
+      <p>A little check before you head out.</p>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR DAILY WEATHER CHECK</p>
+      <h1>Step outside<br>with a <em>little context.</em></h1>
+      <p class="intro-text">
+        Look up a city and get the basics — simple, useful weather information
+        for your everyday plans.
+      </p>
+    </section>
+
+    <section class="search-panel">
+      <form id="search-form">
+        <label for="city-input">WHERE ARE WE CHECKING?</label>
+        <div class="search-row">
+          <input
+            id="city-input"
+            type="text"
+            placeholder="Try Siliguri, Delhi, London..."
+            autocomplete="off"
+            required
+          >
+          <button id="search-button" type="submit">
+            Check weather ↗
+          </button>
+        </div>
+      </form>
+      <p class="hint">Enter a city name to see its current weather.</p>
+    </section>
+
+    <p id="status-message" role="status" aria-live="polite">
+      Search for a city to get started.
+    </p>
+
+    <section id="weather-card" class="weather-card" hidden>
+      <div class="weather-main">
+        <p class="eyebrow">RIGHT NOW IN</p>
+        <div class="place-row">
+          <div>
+            <h2 id="place-name">—</h2>
+            <p id="weather-description">—</p>
+          </div>
+          <div id="weather-symbol" class="weather-symbol">☀</div>
+        </div>
+
+        <div class="temperature-row">
+          <p id="temperature" class="temperature">—°</p>
+          <div class="temperature-note">
+            <span id="feels-like">Feels like —°</span>
+            <span id="day-note">Local conditions</span>
+          </div>
+        </div>
+
+        <p id="updated-note" class="updated-note">Current conditions</p>
+      </div>
+
+      <div class="weather-details">
+        <p class="details-title">THE LITTLE DETAILS</p>
+
+        <div class="detail-item">
+          <span>Humidity</span>
+          <strong id="humidity">—%</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Wind speed</span>
+          <strong id="wind">— km/h</strong>
+        </div>
+
+        <div class="detail-item">
+          <span>Rain today</span>
+          <strong id="rain">— mm</strong>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made for everyday plans, one city at a time.</p>
+      <p>Weather data by
+        <a href="https://open-meteo.com/" target="_blank" rel="noreferrer">
+          Open-Meteo
+        </a>
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
